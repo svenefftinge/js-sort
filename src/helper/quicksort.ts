@@ -1,31 +1,34 @@
-export default function quickSortHelper(data: number[], left: number, right: number): number[] {
-  if (left > right) {
-    const { splitPoint, arr } = split(data, left, right);
-    quickSortHelper(arr, left, splitPoint - 1);
-    return quickSortHelper(arr, splitPoint + 1, right);
-  }
-
-  return data;
-}
-
-function split(arr: number[], left: number, right: number): { splitPoint: number; arr: number[] } {
-  let i = left;
-  let j = right - 1;
-  const pivot = arr[right];
-
-  while (i < j) {
-    while (i < right && arr[i] < pivot) i++;
-    while (j > left && arr[j] >= pivot) j--;
-
-    if (i < j) {
-      const tmp = arr[i];
-      arr[i] = arr[j];
-      arr[j] = tmp;
+export default function quicksortHelper(arr: number[], left: number, right: number) {
+  let index: number;
+  if (arr.length > 1) {
+    index = partition(arr, left, right);
+    if (left < index - 1) {
+      quicksortHelper(arr, left, index - 1);
+    }
+    if (index < right) {
+      quicksortHelper(arr, index, right);
     }
   }
 
-  return {
-    splitPoint: i,
-    arr: arr,
-  };
+  return arr;
+}
+
+function partition(arr: number[], left: number, right: number) {
+  const pivot = arr[Math.floor((right + left) / 2)];
+  let i = left,
+    j = right;
+
+  while (i <= j) {
+    while (arr[i] < pivot) i++;
+    while (arr[j] > pivot) j--;
+
+    if (i <= j) {
+      const tmp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = tmp;
+      i++;
+      j--;
+    }
+  }
+  return i;
 }

@@ -16,7 +16,7 @@
   },
   "keywords": ["Sorting", "Quicksort", "Bubblesort"],
   "author": "philskat",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/philskat/js-sort.git"
