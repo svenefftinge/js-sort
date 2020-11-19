@@ -1,5 +1,5 @@
 {
-  "name": "js-sort",
+  "name": "@philskat/js-sort",
   "version": "1.0.0",
   "description": "Package with a few sorting algorithms",
   "main": "lib/index.js",
