@@ -8,13 +8,13 @@
     "build": "tsc",
     "test": "jest",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
-  "keywords": ["Sorting", "Quicksort", "Bubblesort"],
+  "keywords": [
+    "Sorting",
+    "Quicksort",
+    "Bubblesort"
+  ],
   "author": "philskat",
   "license": "MIT",
   "repository": {
