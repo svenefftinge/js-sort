@@ -1,4 +1,4 @@
-export default function quicksortHelper(arr: number[], left: number, right: number) {
+export default function quicksortHelper(arr: number[], left: number, right: number): number[] {
   let index: number;
   if (arr.length > 1) {
     index = partition(arr, left, right);
