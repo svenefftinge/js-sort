@@ -5,26 +5,21 @@ on:
     branches: 
       - master
       - develop
-    paths:
-      - src/**
-      - test/**
-      - package.json
-      - package-lock.json
-      - tsconfig.json
-      - jest.config.js
-
+    paths-ignore: 
+      - README.md
+      - LICENSE
+      - .gitpod.yml
+      - .gitignore
+  
   push:
     branches:
       - master
       - develop
-    paths:
-      - src/**
-      - test/**
-      - package.json
-      - package-lock.json
-      - tsconfig.json
-      - jest.config.js
-
+    paths-ignore: 
+      - README.md
+      - LICENSE
+      - .gitpod.yml
+      - .gitignore
 jobs:
   build:
     runs-on: ubuntu-latest
